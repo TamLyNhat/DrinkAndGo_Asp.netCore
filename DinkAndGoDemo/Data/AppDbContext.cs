@@ -16,5 +16,7 @@ namespace DinkAndGoDemo.Data
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Import> Imports { get; set; }
+        public DbSet<ImportDetail> ImportDetails { get; set; }
     }
 }

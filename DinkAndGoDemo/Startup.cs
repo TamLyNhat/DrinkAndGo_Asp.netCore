@@ -41,6 +41,8 @@ namespace DinkAndGoDemo
             services.AddScoped(sp => ShoppingCart.GetCart(sp));
 
             services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IImportRepositoy, ImportRepository>();
+            services.AddTransient<IImportDetailRepository, ImportDetailRepository>();
 
             services.AddMvc()
                 .AddControllersAsServices();
