@@ -73,7 +73,9 @@ namespace DinkAndGoDemo.Migrations
 
                     b.Property<DateTime>("ImportDate");
 
-                    b.Property<string>("ProductName");
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
                     b.HasKey("ImportId");
 
@@ -88,9 +90,9 @@ namespace DinkAndGoDemo.Migrations
 
                     b.Property<int>("Amount");
 
-                    b.Property<int?>("CategoryId");
+                    b.Property<int>("CategoryId");
 
-                    b.Property<int?>("ImportId");
+                    b.Property<int>("ImportId");
 
                     b.HasKey("ImportDetailId");
 
@@ -363,12 +365,14 @@ namespace DinkAndGoDemo.Migrations
             modelBuilder.Entity("DinkAndGoDemo.Data.Models.ImportDetail", b =>
                 {
                     b.HasOne("DinkAndGoDemo.Data.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId");
+                        .WithMany("ImportDetails")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("DinkAndGoDemo.Data.Models.Import", "Import")
-                        .WithMany()
-                        .HasForeignKey("ImportId");
+                        .WithMany("ImportDetails")
+                        .HasForeignKey("ImportId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("DinkAndGoDemo.Data.Models.OrderDetail", b =>

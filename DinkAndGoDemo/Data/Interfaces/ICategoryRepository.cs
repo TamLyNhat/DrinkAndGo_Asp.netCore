@@ -9,5 +9,6 @@ namespace DinkAndGoDemo.Data.Interfaces
     public interface ICategoryRepository
     {
         IEnumerable<Category> Categories { get; }
+        IEnumerable<Category> GetAll(); 
     }
 }

@@ -97,7 +97,7 @@ WriteAttributeValue("", 105, Model.ImageThumbnailUrl, 105, 24, false);
             WriteLiteral("</p>\r\n        </div>\r\n        <div class=\"addToCart text-right\">\r\n            <p class=\"button \">\r\n                ");
             EndContext();
             BeginContext(481, 254, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9e1d33b54644e7dbb2adcbd78d42b72", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84d8526bee7549dbb44515ddadcad6f8", async() => {
                 BeginContext(680, 51, true);
                 WriteLiteral("\r\n                    Add to cart\r\n                ");
                 EndContext();

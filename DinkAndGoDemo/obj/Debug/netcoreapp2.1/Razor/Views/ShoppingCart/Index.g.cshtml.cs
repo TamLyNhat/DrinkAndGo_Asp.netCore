@@ -127,7 +127,7 @@ using DinkAndGoDemo.Data.Models;
             WriteLiteral("\r\n                    </td>\r\n                    <td class=\"text-center\">");
             EndContext();
             BeginContext(1015, 167, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bafffb2304a2415cabb79a70187a23ec", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e8a3f23d9eea43ea836c0ae847465c25", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper>();
@@ -180,7 +180,7 @@ using DinkAndGoDemo.Data.Models;
             WriteLiteral("\r\n                </td>\r\n            </tr>\r\n        </tfoot>\r\n    </table>\r\n\r\n    <div class=\"text-right\">\r\n        <div class=\"btn-group \">\r\n            ");
             EndContext();
             BeginContext(1597, 85, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1f6d0ceaef784862813b4dc5e4c1d0ea", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19335ba7a6854fac844a30799c159de6", async() => {
                 BeginContext(1669, 9, true);
                 WriteLiteral("Check out");
                 EndContext();
@@ -211,7 +211,7 @@ using DinkAndGoDemo.Data.Models;
                     <li>");
             EndContext();
             BeginContext(1969, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e791b2de3018433dac7d362d4b677f12", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a5a8841901f4330a5622ca3caddfc1b", async() => {
                 BeginContext(2044, 9, true);
                 WriteLiteral("Alcoholic");
                 EndContext();
@@ -241,7 +241,7 @@ using DinkAndGoDemo.Data.Models;
             WriteLiteral("</li>\r\n                    <li>");
             EndContext();
             BeginContext(2088, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f821980b4ea94367b21b92fe376b045f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3286038a1be1466ab4440517942c690e", async() => {
                 BeginContext(2167, 13, true);
                 WriteLiteral("Non Alcoholic");
                 EndContext();

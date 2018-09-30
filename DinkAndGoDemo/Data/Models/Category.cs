@@ -10,7 +10,7 @@ namespace DinkAndGoDemo.Data.Models
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
         public string Description { get; set; }
-        public List<Drink> Drinks { get; set; } 
-        
+        public List<Drink> Drinks { get; set; }
+        public List<ImportDetail> ImportDetails { get; set; }
     }
 }

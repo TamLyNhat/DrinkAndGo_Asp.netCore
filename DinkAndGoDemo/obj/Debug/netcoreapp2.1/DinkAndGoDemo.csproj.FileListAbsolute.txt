@@ -38,3 +38,10 @@ E:\D\visual 2013\DinkAndGoDemo\DinkAndGoDemo\obj\Debug\netcoreapp2.1\Razor\Views
 E:\D\visual 2013\DinkAndGoDemo\DinkAndGoDemo\obj\Debug\netcoreapp2.1\Razor\Views\Account\Logout.g.cshtml.cs
 E:\D\visual 2013\DinkAndGoDemo\DinkAndGoDemo\obj\Debug\netcoreapp2.1\Razor\Views\Shared\LoginPartial.g.cshtml.cs
 E:\D\visual 2013\DinkAndGoDemo\DinkAndGoDemo\obj\Debug\netcoreapp2.1\Razor\Views\Account\LoggedIn.g.cshtml.cs
+E:\D\visual 2013\DinkAndGoDemo\DinkAndGoDemo\obj\Debug\netcoreapp2.1\Razor\Views\Import\Index.g.cshtml.cs
+E:\D\visual 2013\DinkAndGoDemo\DinkAndGoDemo\obj\Debug\netcoreapp2.1\Razor\Views\Import\Create.g.cshtml.cs
+E:\D\visual 2013\DinkAndGoDemo\DinkAndGoDemo\obj\Debug\netcoreapp2.1\Razor\Views\Import\Edit.g.cshtml.cs
+E:\D\visual 2013\DinkAndGoDemo\DinkAndGoDemo\obj\Debug\netcoreapp2.1\Razor\Views\ImportDetail\Index.g.cshtml.cs
+E:\D\visual 2013\DinkAndGoDemo\DinkAndGoDemo\obj\Debug\netcoreapp2.1\Razor\Views\ImportDetail\Create.g.cshtml.cs
+E:\D\visual 2013\DinkAndGoDemo\DinkAndGoDemo\obj\Debug\netcoreapp2.1\Razor\Views\ImportDetail\Edit.g.cshtml.cs
+E:\D\visual 2013\DinkAndGoDemo\DinkAndGoDemo\obj\Debug\netcoreapp2.1\Razor\Views\ImportDetail\DeletePartial.g.cshtml.cs

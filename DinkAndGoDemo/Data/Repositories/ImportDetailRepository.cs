@@ -16,26 +16,31 @@ namespace DinkAndGoDemo.Data.Repositories
         public ImportDetailRepository(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
+            dbSet = appDbContext.Set<ImportDetail>();
         }
 
-        public void CreateImportDetail(ImportDetail importDetail)
-        {
-            _appDbContext.ImportDetails.Add(importDetail);
+        //public void CreateImportDetail(ImportDetail importDetail)
+        //{
+        //    _appDbContext.ImportDetails.Add(importDetail);
 
-            _appDbContext.SaveChanges();
-        }
+        //    _appDbContext.SaveChanges();
+        //}
 
-        public void DeleteImportDetail(int id)
-        {
-            var entity = dbSet.Find(id);
-            _appDbContext.Remove(entity);
+        //public void DeleteImportDetail(ImportDetail importDetail)
+        //{
+        //    _appDbContext.Remove(importDetail);
 
-            _appDbContext.SaveChanges();
-        }
+        //    _appDbContext.SaveChanges();
+        //}
 
         public IEnumerable<ImportDetail> GetAll()
         {
-            return _appDbContext.ImportDetails.ToList().OrderBy(a => a.ImportDetailId);
+            return _appDbContext.ImportDetails.OrderBy(a => a.ImportDetailId).Include(a => a.Category).Include(t => t.Import);
+        }
+
+        public async Task<ImportDetail> GetById(int? id)
+        {
+            return await _appDbContext.ImportDetails.Include(a => a.Category).Include(t => t.Import).FirstOrDefaultAsync(s => s.ImportDetailId == id);
         }
 
         public ImportDetail GetByID(int id)
@@ -43,13 +48,32 @@ namespace DinkAndGoDemo.Data.Repositories
             return dbSet.Find(id);
         }
 
-        public void UpdateImportDetail(int id)
+        public void UpdateImportDetail(ImportDetail importDetail)
         {
-             var entity = dbSet.Find(id);
-            dbSet.Attach(entity);
-            _appDbContext.Entry(entity).State = EntityState.Modified;
+            dbSet.Attach(importDetail);
+            _appDbContext.Entry(importDetail).State = EntityState.Modified;
 
             _appDbContext.SaveChanges();
+        }
+
+        //public async Task CreateImportDetail(ImportDetail importDetail)
+        //{
+        //    dbSet.Add(importDetail);
+
+        //    await _appDbContext.SaveChangesAsync();
+        //}
+
+        public async Task CreateImportDetail(ImportDetail importDetail)
+        {
+            dbSet.Add(importDetail);
+
+            await _appDbContext.SaveChangesAsync();
+        }
+
+        public async Task DeleteImportDetail(ImportDetail importDetail)
+        {
+            dbSet.Remove(importDetail);
+            await _appDbContext.SaveChangesAsync();
         }
     }
 }

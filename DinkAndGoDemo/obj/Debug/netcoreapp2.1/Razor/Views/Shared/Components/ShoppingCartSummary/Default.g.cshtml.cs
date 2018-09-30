@@ -63,7 +63,7 @@ using DinkAndGoDemo.Data.Models;
             WriteLiteral("    <li>\r\n        ");
             EndContext();
             BeginContext(107, 235, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "655df735eabf4e9facfc9cc9c6c3b9ca", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eb328a2945fe4fb39e4904e84a02beaf", async() => {
                 BeginContext(140, 124, true);
                 WriteLiteral("\r\n            <span class=\"glyphicon glyphicon-shopping-cart\"></span>\r\n            <span id=\"cart-status\">\r\n                ");
                 EndContext();

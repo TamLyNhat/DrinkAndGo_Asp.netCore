@@ -16,6 +16,7 @@ namespace DinkAndGoDemo.Data.Repositories
         public ImportRepository(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
+            dbSet = appDbContext.Set<Import>();
         }
 
         public void CreateImport(Import import)
@@ -27,9 +28,8 @@ namespace DinkAndGoDemo.Data.Repositories
             _appDbContext.SaveChanges();
         }
 
-        public void DeleteImport(int id)
+        public void DeleteImport(Import entity)
         {
-            var entity = dbSet.Find(id);
             _appDbContext.Remove(entity);
 
             _appDbContext.SaveChanges();
@@ -38,23 +38,33 @@ namespace DinkAndGoDemo.Data.Repositories
         public IEnumerable<Import> GetByName(string keyword)
         {
             if (!string.IsNullOrEmpty(keyword))
-                return dbSet.Where(a => a.ProductName.Contains(keyword)).ToList();
+                return dbSet.Where(a => a.ProductName.Contains(keyword));
             else
                 return GetAll();
         }
 
         public IEnumerable<Import> GetAll()
         {
-            return _appDbContext.Imports.ToList().OrderBy(a => a.ImportId);
+            return _appDbContext.Imports.OrderBy(a => a.ImportId);
         }
 
-        public void Update(int id)
+        public void Update(Import entity)
         {
-            var entity = dbSet.Find(id);
             dbSet.Attach(entity);
             _appDbContext.Entry(entity).State = EntityState.Modified;
 
             _appDbContext.SaveChanges();
         }
+
+        public async Task<Import> GetById(int? id)
+        {
+            return await _appDbContext.Imports.FirstOrDefaultAsync(m => m.ImportId == id);
+        }
+
+        public Import GetById(int id)
+        {
+            return dbSet.Find(id);
+        }
+
     }
 }

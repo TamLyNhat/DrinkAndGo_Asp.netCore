@@ -9,11 +9,13 @@ namespace DinkAndGoDemo.Data.Interfaces
     public interface IImportRepositoy
     {
         void CreateImport(Import import);
-        void DeleteImport(int id);
+        void DeleteImport(Import import);
 
-        void Update(int id);
+        void Update(Import import);
 
         IEnumerable<Import> GetByName(string keyword);
         IEnumerable<Import> GetAll();
+        Import GetById(int id);
+        Task<Import> GetById(int? id);
     }
 }

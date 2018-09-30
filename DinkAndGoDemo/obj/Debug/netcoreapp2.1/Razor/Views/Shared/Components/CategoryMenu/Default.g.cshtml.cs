@@ -59,7 +59,7 @@ using DinkAndGoDemo.Data.Models;
             WriteLiteral("<li class=\"dropdown\">\r\n    ");
             EndContext();
             BeginContext(27, 139, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b46e88a529a443efb6138f4f94d2b6af", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb09d155734d47e4b0e0d8d1215fe9b0", async() => {
                 BeginContext(135, 27, true);
                 WriteLiteral("Drinks<b class=\"caret\"></b>");
                 EndContext();
@@ -94,7 +94,7 @@ using DinkAndGoDemo.Data.Models;
             WriteLiteral("            <li>\r\n                ");
             EndContext();
             BeginContext(287, 134, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94b0a2250d534d2994c8906c7c5254d9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e8ebba6db75348829938431ba6f9af3d", async() => {
                 BeginContext(396, 21, false);
 #line 10 "E:\D\visual 2013\DinkAndGoDemo\DinkAndGoDemo\Views\Shared\Components\CategoryMenu\Default.cshtml"
                                                           Write(category.CategoryName);
@@ -143,7 +143,7 @@ using DinkAndGoDemo.Data.Models;
             WriteLiteral("        <li class=\"divider\"></li>\r\n        <li>\r\n            ");
             EndContext();
             BeginContext(514, 85, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "abf472c0a8484583a46a9de9af03b40e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c19fefbd18424306871e2dbe9aaac472", async() => {
                 BeginContext(580, 15, true);
                 WriteLiteral("View all drinks");
                 EndContext();

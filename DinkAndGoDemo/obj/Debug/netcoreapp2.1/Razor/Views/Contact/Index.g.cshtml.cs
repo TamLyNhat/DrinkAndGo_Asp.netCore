@@ -55,7 +55,7 @@ using DinkAndGoDemo.Data.Models;
             WriteLiteral("<h1>Contact us</h1>\r\n<p>If you have any questions please do not hesitate to contact us: </p>\r\n");
             EndContext();
             BeginContext(94, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("email", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ee6e387dec3d4f4db425b1dde355af30", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("email", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4085dbaece514cf8b5fb1c0c7fe954f6", async() => {
             }
             );
             __DinkAndGoDemo_TagHelpers_EmailTagHelper = CreateTagHelper<global::DinkAndGoDemo.TagHelpers.EmailTagHelper>();

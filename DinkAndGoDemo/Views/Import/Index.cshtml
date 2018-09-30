@@ -1,0 +1,58 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <a class="btn btn-success" id="cartButton"
+                       asp-controller="Import"
+                       asp-action="Create">
+                        Create new Import
+                    </a>
+                    <table class="table">
+                        <tr>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Date
+                            </th>
+                        </tr>
+
+                        @foreach (Import import in Model.Imports)
+                        {
+                            <tr>
+                                <td>
+                                    @import.ProductName
+                                </td>
+                                <td>
+                                    @import.ImportDate.ToString(string.Format("dd/MM/yyyy"))
+                                </td>
+                                <td>
+                                    <a asp-controller="Import"
+                                       asp-action="Edit"
+                                     asp-route-ImportId="@import.ImportId"
+                                      >
+                                        Edit
+                                    </a>
+                                    |
+                                    <a asp-controller="Import"
+                                       asp-action="Delete"
+                                       asp-route-ImportId="@import.ImportId">
+                                        Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+
+    </div>
+    <!-- /.row -->
+</div>

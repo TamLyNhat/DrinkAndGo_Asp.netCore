@@ -20,5 +20,10 @@ namespace DinkAndGoDemo.Data.Mocks
                      };
             }
         }
+
+        public IEnumerable<Category> GetAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

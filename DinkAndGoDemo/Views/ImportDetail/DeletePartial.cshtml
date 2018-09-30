@@ -1,0 +1,66 @@
+﻿@model DinkAndGoDemo.Data.Models.ImportDetail
+
+@{
+    string GetId = Model.ImportId.ToString() + "x1";
+}
+
+
+<a class="delete-link"
+   data-toggle="modal"
+   data-target="#@GetId">
+    Delete
+</a>
+
+<div id="@GetId" class="modal fade text-left" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center text-bold">Are you sure delete this row?</h4>
+            </div>
+            <div class="modal-body">
+                <div class="box box-primary">
+                    <!-- /.box-header -->
+                    <!-- form start -->
+
+                    <form asp-action="Delete" method="post" class="form-horizontal" role="form">
+
+
+                        <input asp-for="@Model.ImportDetailId" type="hidden" class="form-control" />
+
+                        @*<div class="form-group">
+                            <label asp-for="Amount" class="control-label"></label>
+                            <input asp-for="Amount" class="form-control" />
+                            <span asp-validation-for="Amount" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Category Name</label>
+                            <input asp-for="Category.CategoryName" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Import Name</label>
+                            <input asp-for="Import.ProductName" class="form-control" />
+                        </div>*@
+
+                        <!-- /.box-body -->
+                        <div class="box-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            <input type="submit" value="Xóa" class="btn btn-primary submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+@*end-Modal Create*@
+
+<style>
+    .delete-link {
+        cursor: pointer;
+    }
+</style>

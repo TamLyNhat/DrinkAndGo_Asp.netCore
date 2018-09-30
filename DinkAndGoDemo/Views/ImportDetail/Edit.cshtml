@@ -1,0 +1,67 @@
+﻿@model DinkAndGoDemo.Data.Models.ImportDetail
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Edit ImportDetail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post" class="form-horizontal" role="form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input asp-for="ImportDetailId" type="hidden" class="form-control" />
+
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <select class="form-control" name="ImportId" asp-for="ImportId" asp-items='@(new SelectList(ViewBag.Imports, "ImportId", "ProductName"))'>
+                    @if (Model.ImportId != 0)
+                    {
+                        <option value="@Model.Import.ProductName">Select Import Name</option>
+                    }
+                    else
+                    {
+                        <option value="value">Select Import Name</option>
+                    }
+                </select>
+                @if (Model.CategoryId == 0)
+                {
+                    <p class="text-danger">Please select your Import Name</p>
+                }
+                @*<span asp-validation-for="ImportId" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <select class="form-control" name="CategoryId" asp-for="CategoryId" asp-items='@(new SelectList(ViewBag.Categories, "CategoryId", "CategoryName"))'>
+                    @if (Model.CategoryId != 0)
+                    {
+                        <option value="@Model.Category.CategoryName">Select Category Name</option>
+                    }
+                    else
+                    {
+                        <option value="value">Select Category Name</option>
+                    }
+                </select>
+                @if (Model.CategoryId == 0)
+                {
+                    <p class="text-danger">Please select your Category Name</p>
+                }
+
+                @*<span asp-validation-for="CategoryId" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
